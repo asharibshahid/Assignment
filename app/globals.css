@@ -1,0 +1,124 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global.css */
+
+/* Global styles reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #ece9e6, #ffffff);
+  color: #333;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Header */
+.header {
+  background-color: #111;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.navList {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+.navList li {
+  margin: 0 20px;
+}
+
+.navList a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 10px 15px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.navList a:hover {
+  background-color: #555;
+  border-radius: 4px;
+  transform: scale(1.05);
+}
+
+/* Main */
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 80vh;
+}
+
+.title {
+  font-size: 3.5rem;
+  color: #111;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.description {
+  font-size: 1.5rem;
+  max-width: 700px;
+  line-height: 1.6;
+  margin-top: 1rem;
+  color: #666;
+  background: #f4f4f4;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #111;
+  color: white;
+  border-radius: 8px;
+  margin-top: 2rem;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Media Query for Mobile Responsiveness */
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.5rem;
+  }
+  
+  .description {
+    font-size: 1.2rem;
+    padding: 15px;
+  }
+  
+  .navList {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .navList a {
+    padding: 8px 10px;
+  }
+}
